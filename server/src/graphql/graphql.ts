@@ -9,7 +9,8 @@ import { graphqlResolver } from "./resolver/resolver";
 export default function connectGraphql<MyContext>() {
     return new ApolloServer({
         typeDefs: graphqlSchema,
-        resolvers: graphqlResolver
+        resolvers: graphqlResolver, 
+        introspection: true,
     });
 }
 
