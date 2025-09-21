@@ -8,11 +8,12 @@ const CLIENT_ID = process.env.CLIENT_ID!;
 const CLIENT_SECRET = process.env.CLIENT_SECRET!;
 const CALLBACK_URL = process.env.CALLBACK_URL!;
 const REFRESH_SECRET = process.env.REFRESH_SECRET!;
-
+const CLIENT_URL = process.env.CLIENT_URL!;
 export {
     JWT_SECRET,
     PORT,
     DATABASE_URL,
+    CLIENT_URL,
     CLIENT_ID,
     CLIENT_SECRET,
     CALLBACK_URL,

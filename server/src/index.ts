@@ -4,11 +4,11 @@ import cookieParser from "cookie-parser"
 import { expressMiddleware } from '@as-integrations/express5';
 import connectGraphql from "./graphql/graphql";
 import { buildContext } from "./middlewares/auth";
-import { PORT } from "./lib/constant";
+import { PORT, CLIENT_URL } from "./lib/constant";
 import { googleCallback } from "./controller/auth";
 
 const app = express();
-app.use(cors({ origin: "http://localhost:5173", credentials: true }))
+app.use(cors({ origin: CLIENT_URL, credentials: true }))
 app.use(express.json());
 app.use(urlencoded({ extended: true }));
 app.use(cookieParser());
